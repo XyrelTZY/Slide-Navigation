@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background:linear-gradient(78deg, gray 38%, wheat 51%);
+}
+
+.open-btn {
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    color: black;
+    height: 75px;
+    transition: 0.5s ease-in-out;
+}
+
+.open-btn:hover{
+    color: wheat;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(29deg, wheat 78%, gray 89%);
+    overflow-x: hidden;
+    transition: 0.3s all ease-in-out;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: gray;
+}
+
+.sidenav .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.content {
+    margin-left: 200px;
+    transition: margin-left 0.5s;
+    text-align: center;
+    padding: 16px;
+    overflow: hidden;
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: 5px; 
+    animation: typing .5s steps(40, end), blink-caret .5s step-end infinite;
+    background: linear-gradient(90deg, wheat 52%, gray 75%);
+    transition: 0.5s all ease-in-out;
+    height: 528px;
+}
+
+.content h6{
+    font-size: 24px;
+}
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    30% { border-color: none; }
+  }
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
